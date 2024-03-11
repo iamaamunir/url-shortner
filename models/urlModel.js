@@ -23,4 +23,4 @@ const UrlSchema = mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model("Url", UrlSchemaSchema)
+module.exports = mongoose.model("Url", UrlSchema)

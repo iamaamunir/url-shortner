@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-const CONFIG = require("./../config/config")
+import CONFIG from './../config/config.js'
 
 function DbConnection() {
   mongoose.set("strictQuery", true)
@@ -12,4 +12,4 @@ function DbConnection() {
   })
 }
 
-module.exports = DbConnection
+export default DbConnection

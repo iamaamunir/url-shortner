@@ -1,5 +1,7 @@
+// const express = require("express")
 import express from 'express'
-const CONFIG = require("./config/config")
+import CONFIG from './config/config.js'
+// const CONFIG = require("./config/config")
 
 const app = express()
 
@@ -23,4 +25,4 @@ app.get("/", (req, res) => {
 
 // app.use(errorHandler.errorHandler)
 
-module.exports = app
+export default app

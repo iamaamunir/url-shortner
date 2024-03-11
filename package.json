@@ -2,11 +2,12 @@
   "name": "url-shortner",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon server.js"
   },
+  "type":"module",
   "keywords": [],
   "author": "",
   "license": "ISC",

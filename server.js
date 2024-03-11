@@ -1,12 +1,13 @@
-const http = require("http")
+// const http = require("http")
+import http from 'http'
+import app from './app.js'
+// const app = require("./app")
 
-const app = require("./app")
-
-const config = require("./config/config")
+import config from './config/config.js'
 
 const PORT = config.PORT || 5000
 
-const connectToDb = require("./db/db.js")
+import connectToDb from './db/db.js'
 connectToDb()
 
 const server = http.createServer(app)
