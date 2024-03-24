@@ -1,11 +1,11 @@
 import mongoose from "mongoose"
-const UrlSchema = mongoose.Schema({
+const UrlSchema =  mongoose.Schema({
   urlId: {
     type: String,
     required: true,
   },
   clicks: {
-    type: number,
+    type: Number,
     required: true,
     default: 0,
   },
@@ -23,4 +23,5 @@ const UrlSchema = mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model("Url", UrlSchema)
+const Url = mongoose.model("Url", UrlSchema)
+export default Url

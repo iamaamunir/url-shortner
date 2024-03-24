@@ -1,22 +1,22 @@
 // const express = require("express")
 import express from 'express'
 import CONFIG from './config/config.js'
-// const CONFIG = require("./config/config")
-
+import urlRouter from './routes/urlRoutes.js'
 const app = express()
 
-const NODE_ENV = CONFIG.NODE_ENV
+// const NODE_ENV = CONFIG.NODE_ENV
 
 app.use(express.json())
-// if (NODE_ENV === "development") {
-//   app.use(morgan("dev"))
-// }
+app.use(express.urlencoded({ extended: true }))
+
 app.get("/", (req, res) => {
   res.status(200).json({
     status: "success",
     message: "Welcome to URL-SHORTNER Homepage",
   })
 })
+
+app.use('/api', urlRouter)
 
 
 // app.all("*", (req, res, next) => {
