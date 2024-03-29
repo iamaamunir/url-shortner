@@ -1,8 +1,8 @@
-import User from '../models/userModel.js'
-import jwt from 'jsonwebtoken'
-import omit from 'lodash'
-import CONFIG from '../config/config.js'
-import AppError from '../utils/appError.js'
+import User from "../models/userModel.js"
+import jwt from "jsonwebtoken"
+import omit from "lodash"
+import CONFIG from "../config/config.js"
+import AppError from "../utils/appError.js"
 
 const signup = async function (req, res, next) {
   try {
@@ -58,6 +58,7 @@ const login = async function (req, res, next) {
       })
       // save user token
       user.token = token
+
       res.status(200).json({ token: token })
     } else {
       next(new AppError("Invalid credentials", 400))
@@ -67,4 +68,4 @@ const login = async function (req, res, next) {
   }
 }
 
-export default {signup, login}
+export default { signup, login }

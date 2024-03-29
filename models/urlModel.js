@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-const UrlSchema =  mongoose.Schema({
+const UrlSchema = mongoose.Schema({
   urlId: {
     type: String,
     required: true,
@@ -15,12 +15,16 @@ const UrlSchema =  mongoose.Schema({
   },
   shortUrl: {
     type: String,
-    required: true
+    required: true,
   },
-  date:{
+  date: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
 })
 
 const Url = mongoose.model("Url", UrlSchema)
