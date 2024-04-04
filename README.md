@@ -59,7 +59,7 @@ npm run start:dev
 
 ## Base URL
 
-https://vast-rose-millipede-ring.cyclic.app/
+https://url-shortner-s1cd.onrender.com
 
 ---
 
