@@ -9,7 +9,6 @@ const verifyToken = (req, res, next) => {
       next(new AppError("Something is wrong with the server", 500))
     }
     const token = req.headers.authorization.split(" ")[1]
-    console.log('error');
     const decoded = jwt.verify(token, CONFIG.TOKEN_KEY)
     req.user = decoded
    
